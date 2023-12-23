@@ -135,53 +135,86 @@ h3{
     transition: .3s ease-in-out;
 }
 
+/* view count */
+#viewCount {
+      display: flex;
+      align-items: center;
+      font-size: 24px;
+    }
+
+    #eyeIcon {
+      margin-right: 8px;
+    }
     </style>
 </head>
 <body>
     <div class="container">
         <h2>AUTOMOBILE ENGINEERING TECHNICIAN <br><small>Record Notes</small></h2>
+        <div id="viewCount">
+          <span id="eyeIcon">Number of Visitors: </span>
+          <span id="count">0</span>
+        </div>
+        
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            // Check if visitor count is stored in local storage
+            let count = localStorage.getItem("visitorCount");
+
+            // If not, initialize it to 0
+            if (!count) {
+                count = 0;
+            }
+
+            // Update the count on the page
+            document.getElementById("count").textContent = count;
+
+            // Increment the count when the page is loaded
+            count++;
+            localStorage.setItem("visitorCount", count);
+        });
+        </script>
         <ul class="responsive-table">
           <li class="table-header">
             <div class="col col-1"><h3>year</h3></div>
             <div class="col col-2"><h3>Paper</h3></div>
             <div class="col col-3"><h3>Subject Name</h3></div>
-            <div class="col col-4"><h3>PDF files</h3></div>
+            <div class="col col-4"><h3>Files</h3></div>
           </li>
           <li class="table-row">
             <div class="col col-1" data-label="year">1st Year</div>
             <div class="col col-2" data-label="paper">Paper-I</div>
             <div class="col col-3" data-label="subject">Workshop Practice</div>
-            <div class="col col-4" data-label="option">👉<a href="AET_1st_year_paper-I.pdf" target="_blank">View / Download</a></div>
+            <div class="col col-4" data-label="option">👉<a href="AET_1st_year_paper-I.html">View</a> / <a href="AET_1st_year_paper-I.pdf">Download</a></div>
           </li>
           <li class="table-row">
             <div class="col col-1" data-label="year">1st Year</div>
             <div class="col col-2" data-label="paper">Paper-II</div>
             <div class="col col-3" data-label="subject">Engineering Drawing and Auto CAD</div>
-            <div class="col col-4" data-label="option">👉<a href="#">View / Download</a></div>
+            <div class="col col-4" data-label="option">👉<a href="#">View</a> / <a href="AET_1st_year_paper-II.pdf">Download</a></div>
           </li>
           <li class="table-row">
             <div class="col col-1" data-label="year">1st Year</div>
             <div class="col col-2" data-label="paper">Paper-III</div>
             <div class="col col-3" data-label="subject">Automobile Engine Lab</div>
-            <div class="col col-4" data-label="option">👉<a href="AET_1st_year_paper-III.pdf" target="_blank">View / Download</a></div>
+            <div class="col col-4" data-label="option">👉<a href="AET_1st_year_paper-III.html">View</a> / <a href="AET_1st_year_paper-III.pdf">Download</a></div>
           </li>
           <li class="table-row">
             <div class="col col-1" data-label="year">2nd Year</div>
             <div class="col col-2" data-label="paper">Paper-I</div>
             <div class="col col-3" data-label="subject">Auto Transmission and Electrical System Lab</div>
-            <div class="col col-4" data-label="option">👉<a href="AET_2nd_year_paper-I.pdf" target="_blank">View / Download</a></div>
+            <div class="col col-4" data-label="option">👉<a href="AET_2nd_year_paper-I.html">View</a> / <a href="AET_2nd_year_paper-I.pdf">Download</a></div>
           </li>
           <li class="table-row">
             <div class="col col-1" data-label="year">2nd Year</div>
             <div class="col col-2" data-label="paper">Paper-II</div>
             <div class="col col-3" data-label="subject">Auto Chassis and Body Engineering Lab</div>
-            <div class="col col-4" data-label="option">👉<a href="AET_2nd_year_paper-II.pdf" target="_blank">View / Download</a></div>
+            <div class="col col-4" data-label="option">👉<a href="AET_2nd_year_paper-II.html">View</a> / <a href="AET_2nd_year_paper-II.pdf">Download</a></div>
           </li>
           <li class="table-row">
             <div class="col col-1" data-label="year">2nd Year</div>
             <div class="col col-2" data-label="paper">Paper-III</div>
             <div class="col col-3" data-label="subject">Auto Servicing and Maintenance Lab</div>
-            <div class="col col-4" data-label="option">👉<a href="AET_2nd_year_pIaper-III.pdf" target="_blank">View / Download</a></div>
+            <div class="col col-4" data-label="option">👉<a href="AET_2nd_year_pIaper-III.html">View</a> / <a href="AET_2nd_year_paper-III.pdf">Download</a></div>
           </li>
         </ul>
       </div>
