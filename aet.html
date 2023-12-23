@@ -134,45 +134,12 @@ h3{
     -o-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
 }
-
-/* view count */
-#viewCount {
-      display: flex;
-      align-items: center;
-      font-size: 24px;
-    }
-
-    #eyeIcon {
-      margin-right: 8px;
-    }
     </style>
 </head>
 <body>
     <div class="container">
         <h2>AUTOMOBILE ENGINEERING TECHNICIAN <br><small>Record Notes</small></h2>
-        <div id="viewCount">
-          <span id="eyeIcon">Number of Visitors: </span>
-          <span id="count">0</span>
-        </div>
         
-        <script>
-          document.addEventListener("DOMContentLoaded", function () {
-            // Check if visitor count is stored in local storage
-            let count = localStorage.getItem("visitorCount");
-
-            // If not, initialize it to 0
-            if (!count) {
-                count = 0;
-            }
-
-            // Update the count on the page
-            document.getElementById("count").textContent = count;
-
-            // Increment the count when the page is loaded
-            count++;
-            localStorage.setItem("visitorCount", count);
-        });
-        </script>
         <ul class="responsive-table">
           <li class="table-header">
             <div class="col col-1"><h3>year</h3></div>
