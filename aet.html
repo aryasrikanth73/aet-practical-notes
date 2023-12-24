@@ -3,142 +3,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"> -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="icon" type="image/x-icon" href="Mypic.jpg">
-<title>Automobile Engineering Technician</title>
-    <style>
-        body {
-  font-family: 'lato', sans-serif;
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Div Animation</title>
+    <!-- <style>
+        .name{
+            color: green;
+            font-size: 30px;
+            background-color: aqua;
+            width: 500px;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .name-1 {
+            color: rgb(47, 28, 116);
+            font-size: 30px;
+            background-color: rgb(255, 0, 0);
+            width: 500px;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .animated-element {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s, transform 0.5s;
+        }
+
+        .reveal {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style> -->
+</head>
+<style>
+    body {
+font-family: 'lato', sans-serif;
 }
 .container {
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 10px;
-  padding-right: 10px;
+max-width: 1000px;
+margin-left: auto;
+margin-right: auto;
+padding-left: 10px;
+padding-right: 10px;
 }
 
 h2 {
-  font-size: 26px;
-  margin: 30px 0;
-  text-align: center;
-  small {
-    font-size: 0.5em;
-  }
+font-size: 26px;
+margin: 30px 0;
+text-align: center;
+small {
+font-size: 0.5em;
+}
 }
 h3{
-    color: white;
+color: white;
 }
 
 .responsive-table {
-  padding-left: 0px;
+padding-left: 0px;
 }
-  li {
-    border-radius: 3px;
-    padding: 25px 30px;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 25px;
-  }
-  .table-header {
-    background-color: #95A5A6;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
-  }
-  .table-row {
-    background-color: #ffffff;
-    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
-  }
-  .col-1 {
-    flex-basis: 20%;
-    text-align: center;
-  }
-  .col-2 {
-    flex-basis: 25%;
-    text-align: center;
-  }
-  .col-3 {
-    flex-basis: 30%;
-    /* text-align: center; */
-  }
-  .col-4 {
-    flex-basis: 25%;
-    text-align: center;
-  }
-  
-  @media all and (max-width: 767px) {
-    
-    .table-header {
-      display: none;
-    }
-    
-    li {
-      display: block;
-    }
-    .col {
-      
-      flex-basis: 100%;
-      
-    }
-    .col {
-      display: flex;
-      padding: 10px 0;
-      &:before {
-        color: black;
-        padding-right: 10px;
-        /* content: attr(data-label); */
-        flex-basis: 50%;
-        text-align: right !important;
-      }
-    }
-    .col-1 {
-    text-align: left;
-    font-size: large;
-  }
+li {
+border-radius: 3px;
+padding: 25px 30px;
+display: flex;
+justify-content: space-between;
+margin-bottom: 25px;
+}
+.table-header {
+background-color: #95A5A6;
+font-size: 14px;
+text-transform: uppercase;
+letter-spacing: 0.03em;
+}
+.table-row   data-aos="flip-left"{
+background-color: #ffffff;
+box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+}
+.col-1 {
+flex-basis: 20%;
+text-align: center;
+}
 .col-2 {
-    text-align: left;
-    font-size: large;
-  }
+flex-basis: 25%;
+text-align: center;
+}
 .col-3 {
-    text-align: left;
-    font-size: large;
-  }
+flex-basis: 30%;
+/* text-align: center; */
+}
 .col-4 {
-    text-align: left;
-    font-size: large;
+flex-basis: 25%;
+text-align: center;
+}
+
+@media all and (max-width: 767px) {
+
+.table-header {
+  display: none;
+}
+
+li {
+  display: block;
+}
+.col {
+  
+  flex-basis: 100%;
+  
+}
+.col {
+  display: flex;
+  padding: 10px 0;
+  &:before {
+    color: black;
+    padding-right: 10px;
+    /* content: attr(data-label); */
+    flex-basis: 50%;
+    text-align: right !important;
   }
-  }
+}
+.col-1 {
+text-align: left;
+font-size: large;
+}
+.col-2 {
+text-align: left;
+font-size: large;
+}
+.col-3 {
+text-align: left;
+font-size: large;
+}
+.col-4 {
+text-align: left;
+font-size: large;
+}
+}
 
 
 .footer__bottom {
-    position: relative;
-    z-index: 4;
-    padding: 18px 0;
-    border-top: 0 solid rgba(232, 232, 232, .3);
-    text-align: center;
-    font-size: 14px;
-    color: #fff;
-    background: #1e3559;
+position: relative;
+z-index: 4;
+padding: 18px 0;
+border-top: 0 solid rgba(232, 232, 232, .3);
+text-align: center;
+font-size: 14px;
+color: #fff;
+background: #1e3559;
 }
 
 
 
 .footer__bottom a {
-    background: 0 0;
-    color: inherit;
-    font-family: inherit;
-    font-size: inherit;
-    border: none;
-    cursor: pointer;
-    -webkit-transition: .3s ease-in-out;
-    -o-transition: .3s ease-in-out;
-    transition: .3s ease-in-out;
+background: 0 0;
+color: inherit;
+font-family: inherit;
+font-size: inherit;
+border: none;
+cursor: pointer;
+-webkit-transition: .3s ease-in-out;
+-o-transition: .3s ease-in-out;
+transition: .3s ease-in-out;
 }
-    </style>
-</head>
+</style>
 <body>
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div data-aos="flip-left" class="name">Srikanth</div>    
+            </div>
+            <div class="col-md-6">
+                <div data-aos="flip-right" class="name-1">Srikanth</div>    
+            </div>
+        </div>
+    </div>
+
+    <div class="animated-element">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div data-aos="" class="name">Srikanth</div>    
+                </div>
+                <div class="col-md-6">
+                    <div data-aos="" class="name-1">Srikanth</div>    
+                </div>
+            </div>
+        </div>
+    </div> -->
     <div class="container">
         <h2>AUTOMOBILE ENGINEERING TECHNICIAN <br><small>Record Notes</small></h2>
         
@@ -189,10 +247,12 @@ h3{
       </div>
       
       <div class="footer__bottom">Copyright © <a href="https://aryasrikanth73.github.io/srikantharya/resume.html">Srikanth Arya</a>. All rights reserved.</div>
-      <script>
+      
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
     AOS.init({
         duration: 3000,
     });
   </script>
-  </body>
+</body>
 </html>
